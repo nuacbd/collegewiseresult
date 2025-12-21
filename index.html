@@ -1,45 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-73297021-1', 'auto');
-  ga('send', 'pageview');
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National University Results Portal</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .content {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+        .instruction {
+            font-size: 1.1rem;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="main.css">
+        /* Box Layout */
+        .box-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 4px 4px 0 0;
+            margin-top: 20px;
+        }
+        .box-body {
+            border: 1px solid #ddd;
+            border-top: none;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+            gap: 10px;
+            justify-content: center;
+        }
+
+        /* Responsive Buttons */
+        .link-button {
+            background-color: #f8f9fa;
+            border: 1px solid #007bff;
+            color: #007bff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            flex: 1 1 calc(45% - 10px); /* Two columns on medium screens */
+            text-align: center;
+        }
+        .link-button:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) {
+            .link-button {
+                flex: 1 1 100%; /* Full width buttons on mobile */
+            }
+            h1 { font-size: 1.2rem; }
+        }
+        
+        footer {
+            margin-top: 30px;
+            text-align: right;
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
 <body>
-  <h1> Collegewise Result for National University of Bangladesh </h1> 
+
 <div class="content">
-  
-  <p class="instruction" style="align=center; font-size:1.5em; border: 0px;">Please click appropriate link to see college-wise result</p>
-  <div class="box-header">Honours</div>
-  <div class="box-body">
-	
-   <a href="hon_first_year.html" class="link-button">First Year</a>
-   <a href="hon_second_year.html" class="link-button">Second Year</a>
-   <a href="hon_third_year.html" class="link-button">Third Year</a>
-   <a href="hon_fourth_year.html" class="link-button">Fourth Year</a>
-   </div>
+    <h1>Collegewise Result for National University of Bangladesh</h1> 
+    <p class="instruction">Please click the appropriate link to see college-wise results</p>
 
-<p></p>
-<hr>
-<p></p>
+    <div class="box-header">Honours</div>
+    <div class="box-body">
+        <a href="hon-first-year.html" class="link-button">First Year</a>
+        <a href="hon-second-year.html" class="link-button">Second Year</a>
+        <a href="hon-third-year.html" class="link-button">Third Year</a>
+        <a href="hon-fourth-year.html" class="link-button">Fourth Year</a>
+    </div>
 
-<div class="box-header">Masters</div>
-  <div class="box-body">
-	
-   <a href="#" class="link-button">Part-1 (Previous Masters)</a>
-   <a href="mas_final.html" class="link-button">Masters Final</a>
-   </div>
+    <div class="box-header">Masters</div>
+    <div class="box-body">
+        <a href="mas-prev.html" class="link-button">Part-1 (Previous Masters)</a>
+        <a href="mas-final.html" class="link-button">Masters Final</a>
+    </div>
 
-	<p style="text-align:right;">by Md. Mehedi Hasan <a href="response_form.html">[Send Feedback]</a> </p>
-  
+    <footer>
+        by Md. Mehedi Hasan | <a href="response-form.html">Send Feedback</a>
+    </footer>
 </div>
 
 </body>
