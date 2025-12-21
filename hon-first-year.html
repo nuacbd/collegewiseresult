@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honours First Year - National University</title>
+    
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <style>
+        /* Responsive Overwrites to ensure mobile compatibility */
+        body {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        .content {
+            width: 100%;
+            max-width: 600px; /* Limits width on PC */
+            margin: 0 auto;
+        }
+        .box-body {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+        select, input[type="number"] {
+            width: 100%; /* Full width on mobile */
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        @media (min-width: 768px) {
+            h1 { font-size: 2.2em; }
+        }
+    </style>
+
+    <script type="text/javascript">
+        function updateTextField() {
+            var select = document.getElementById("m_college_name_option");
+            var option = select.options[select.selectedIndex];
+            document.getElementById("m_college_name").value = option.value;
+        }
+    </script>
+</head>
+<body>
+
+<div class="content">
+    <form name="Form1" action="http://nu.edu.bd/results/honours/result_1styearHonours.php" method="post" target="_blank" id="Form1">
+        
+        <h1> Collegewise Result for National University of Bangladesh </h1> 
+        
+        <p class="instruction" style="text-align:center; font-size:2em; color:blue; margin: 10px 0;">Honours First Year</p>
+
+        <div class="box-header" style="font-size:1.2em; padding:5px;">Select Subject</div>
+        <div class="box-body">
+            <select name="sub_name" id="sub_name">
+                <option value="25"> ACCOUNTING </option>
+                <option value="40"> ANTHROPOLOGY </option>
+                <option value="12"> ARABIC </option>
+                <option value="10"> BENGALI </option>
+                <option value="29"> BIOCHEMISTRY </option>
+                <option value="30"> BOTANY </option>
+                <option value="28"> CHEMISTRY </option>
+                <option value="22"> ECONOMICS </option>
+                <option value="11"> ENGLISH </option>
+                <option value="44"> ENVIRONMENTAL SCIENCE </option>
+                <option value="24"> FINANCE & BANKING </option>
+                <option value="32"> GEOGRAPHY & ENVIRONMENT </option>
+                <option value="15"> HISTORY </option>
+                <option value="35"> HOME ECONOMICS </option>
+                <option value="16"> ISLAMIC HISTORY & CULTURE </option>
+                <option value="18"> ISLAMIC STUDIES </option>
+                <option value="26"> MANAGEMENT </option>
+                <option value="23"> MARKETING </option>
+                <option value="37"> MATHEMATICS </option>
+                <option value="17"> PHILOSOPHY </option>
+                <option value="27"> PHYSICS </option>
+                <option value="19"> POLITICAL SCIENCE </option>
+                <option value="34"> PSYCHOLOGY </option>
+                <option value="20"> SOCIOLOGY </option>
+                <option value="33"> SOIL SCIENCE </option>
+                <option value="36"> STATISTICS </option>
+                <option value="31"> ZOOLOGY </option>
+                <option value="38"> LIBRARY AND INFORMATION SCIENCE </option>
+                <option value="13"> SANSKRIT </option>
+                <option value="21"> SOCIAL WORK / WELFARE </option>
+            </select>
+        </div>
+
+        <div class="box-header" style="font-size:1.2em; padding:5px;">College</div>
+        <div class="box-body">
+            <p style="background-color:LightSteelBlue; text-align:center; color:Blue; padding: 5px;">Select College :</p> 
+            <select name="m_college_name_option" id="m_college_name_option" onchange="updateTextField()">
+                <option value="2101" selected>GOVT. EDWARD COLLEGE</option>
+                <option value="539">A. B. C. D. COLLEGE</option>
+                </select>
+            
+            <p style="text-align:center; font-weight:bold;">Or</p> 
+            
+            <p style="background-color:LightSteelBlue; text-align:center; color:Blue; padding: 5px;">Type College Code:</p> 
+            <input type="number" name="m_college_name" id="m_college_name" value="2101" maxlength="10">
+        </div>
+
+        <div class="box-header" style="font-size:1.2em; padding:5px;">Enter Year</div>
+        <div class="box-body">
+            <input name="exam_year" type="number" id="exam_year" placeholder="YYYY" maxlength="4">
+        </div>
+
+        <div style="margin-top: 20px;">
+            <input class="submit-button" type="submit" name="submit" value="Show Collegewise Result">
+        </div>
+
+        <p style="text-align:right; margin-top: 20px;">
+            by Md. Mehedi Hasan <a href="response-form.html">[Send Feedback]</a> 
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
+
