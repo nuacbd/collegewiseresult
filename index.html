@@ -3,48 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>National University Results Portal</title>
+    <title>National University Results Portal - nuacbd.com</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
+<div class="header-banner">
+    <h1>NU Results Portal</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</div>
+
 <nav class="navbar">
-    <a href="index" class="active">Home</a>
-    <a href="hon-first-year">Honours 1st</a>
-    <a href="hon-second-year">Honours 2nd</a>
-    <a href="hon-third-year">Honours 3rd</a>
-    <a href="hon-fourth-year">Honours 4th</a>
-    <a href="mas-final">Masters</a>
+    <div class="nav-links" id="nav-links">
+        <a href="index" class="active">Home</a>
+        <a href="hon-first-year">Honours 1st</a>
+        <a href="hon-second-year">Honours 2nd</a>
+        <a href="hon-third-year">Honours 3rd</a>
+        <a href="hon-fourth-year">Honours 4th</a>
+        <a href="mas-final">Masters</a>
+    </div>
 </nav>
 
-<div class="container">
-    <div style="width: 100%; max-width: 500px;">
-        <h1>Collegewise Result for National University of Bangladesh</h1> 
-        
-        <div class="content">
-            <p style="text-align:center; color: #555;">Please select a link below:</p>
+<div class="content-wrapper">
+    <p style="text-align:center; color: #666; font-weight: 500;">Select your year to view college-wise results:</p>
 
-            <div class="box-header">Honours</div>
-            <div class="box-body">
-                <a href="hon-first-year" class="link-button">First Year</a>
-                <a href="hon-second-year" class="link-button">Second Year</a>
-                <a href="hon-third-year" class="link-button">Third Year</a>
-                <a href="hon-fourth-year" class="link-button">Fourth Year</a>
-            </div>
-
-            <div class="box-header">Masters</div>
-            <div class="box-body">
-                <a href="mas-prev" class="link-button">Masters Part-1</a>
-                <a href="mas-final" class="link-button">Masters Final</a>
-            </div>
-
-            <footer>
-                &copy; <a href="https://nuacbd.com">nuacbd.com</a> | All Rights Reserved. <br>
-                <a href="response-form">Send Feedback</a>
-            </footer>
-        </div>
+    <div class="box-header">Honours Section</div>
+    <div class="box-body">
+        <a href="hon-first-year" class="link-button">First Year</a>
+        <a href="hon-second-year" class="link-button">Second Year</a>
+        <a href="hon-third-year" class="link-button">Third Year</a>
+        <a href="hon-fourth-year" class="link-button">Fourth Year</a>
     </div>
+
+    <div class="box-header">Masters Section</div>
+    <div class="box-body">
+        <a href="mas-prev" class="link-button">Masters Part-1</a>
+        <a href="mas-final" class="link-button">Masters Final</a>
+    </div>
+
+    <footer>
+        &copy; <a href="https://nuacbd.com">nuacbd.com</a> | All Rights Reserved. <br>
+        <br>
+        <a href="response-form">Send Feedback</a>
+    </footer>
 </div>
+
+<script>
+    function toggleMenu() {
+        var links = document.getElementById("nav-links");
+        links.classList.toggle("active");
+    }
+</script>
 
 </body>
 </html>
+
