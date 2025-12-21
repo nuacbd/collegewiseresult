@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National University Results Portal - nuacbd.com</title>
     <link rel="stylesheet" href="main.css">
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navbar");
+            nav.classList.toggle("open");
+        }
+    </script>
 </head>
 <body>
 
@@ -13,19 +19,17 @@
     <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 </div>
 
-<nav class="navbar">
-    <div class="nav-links" id="nav-links">
-        <a href="index" class="active">Home</a>
-        <a href="hon-first-year">Honours 1st</a>
-        <a href="hon-second-year">Honours 2nd</a>
-        <a href="hon-third-year">Honours 3rd</a>
-        <a href="hon-fourth-year">Honours 4th</a>
-        <a href="mas-final">Masters</a>
+<nav class="navbar" id="navbar">
+    <div class="nav-links">
+        <a href="index" class="active">HOME</a>
+        <a href="hon-first-year">HONOURS</a>
+        <a href="deg-first-year">DEGREE</a>
+        <a href="mas-final">MASTERS</a>
     </div>
 </nav>
 
 <div class="content-wrapper">
-    <p style="text-align:center; color: #666; font-weight: 500;">Select your year to view college-wise results:</p>
+    <p style="text-align:center; color: #666; font-weight: 500;">Select your course and year to view college-wise results:</p>
 
     <div class="box-header">Honours Section</div>
     <div class="box-body">
@@ -35,6 +39,13 @@
         <a href="hon-fourth-year" class="link-button">Fourth Year</a>
     </div>
 
+    <div class="box-header">Degree Section</div>
+    <div class="box-body">
+        <a href="deg-first-year" class="link-button">First Year</a>
+        <a href="deg-second-year" class="link-button">Second Year</a>
+        <a href="deg-third-year" class="link-button">Third Year</a>
+    </div>
+
     <div class="box-header">Masters Section</div>
     <div class="box-body">
         <a href="mas-prev" class="link-button">Masters Part-1</a>
@@ -42,19 +53,9 @@
     </div>
 
     <footer>
-        &copy; <a href="https://nuacbd.com">nuacbd.com</a> | All Rights Reserved. <br>
-        <br>
-        <a href="response-form">Send Feedback</a>
+        &copy; <a href="https://nuacbd.com">nuacbd.com</a> | All Rights Reserved.
     </footer>
 </div>
 
-<script>
-    function toggleMenu() {
-        var links = document.getElementById("nav-links");
-        links.classList.toggle("active");
-    }
-</script>
-
 </body>
 </html>
-
