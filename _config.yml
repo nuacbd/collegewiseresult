@@ -4,4 +4,4 @@ plugins:
   - jekyll-sitemap
   
 # Add this line to remove .html extensions
-permalink: /:title/
+permalink: /:basename
